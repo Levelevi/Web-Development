@@ -3,48 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Box Sizing Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        /* Both boxes share these exact same properties */
+        .box {
+            width: 300px;
+            height: 150px;
+            padding: 20px;
+            border: 5px solid #333;
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Box 1: The old, frustrating way */
+        .without-border-box {
+            box-sizing: content-box; /* This is the default browser behavior */
+        }
+
+        /* Box 2: The modern, predictable way */
+        .with-border-box {
+            box-sizing: border-box; /* The fix! */
+            background-color: #2ecc71; /* Green just to tell them apart */
+        }
+
+        span {
+            display: block;
+            font-weight: normal;
+            font-size: 0.9em;
+            margin-top: 10px;
+            color: #eee;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <p>Logo</p>
-        <nav>
-            <a href="">Home</a>
-            <a href="">About Me</a>
-            <a href="">Skills</a>
-            <a href="">Projects</a>
-            <a href="">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>Jugraj Singh</h1>
-            <p>Hello everyone i'm a web developer trying to tweak some code . </p>
-        </section>
-        <section>
-            <h2>About me</h2>
-            <p>I'm learning web development and i want to create my own websites and create video games </p>
-        </section>
-        <section>
-            <h2>Skills</h2>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JS</p>
-        </section>
-        <section>
-            <h2>Projects</h2>
-            <p>Number guessing Game</p>
-            <p>HTML structure</p>
-            <p>Rock paper Scissor game</p>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <p>xyz@gmail.com</p>
-            <p>8833884433</p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2026 Growth Agency</p>
-    </footer>
+
+    <h2>Box-Sizing Comparison</h2>
+    <p>Both boxes have CSS set to <strong>width: 300px</strong>, <strong>padding: 20px</strong>, and <strong>border: 5px</strong>.</p>
+
+    <div class="container">
+        
+        <div class="box without-border-box">
+            WITHOUT border-box (Default)
+            <span>The browser ADDED the padding and border to the outside. <br><br><strong>Actual Width: 350px</strong></span>
+        </div>
+
+        <div class="box with-border-box">
+            WITH border-box
+            <span>The browser KEPTS the total size locked. Padding and border are pushed inside. <br><br><strong>Actual Width: 300px</strong></span>
+        </div>
+
+    </div>
+
 </body>
 </html>
