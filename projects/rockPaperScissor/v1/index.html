@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     /* 1. Global Reset & Page Setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 2. Main Game Container */
+.thisgame {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* 3. Typography */
+h1 {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* 4. Results & Score Area */
+.resultGroup {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px 0;
+}
+
+.result {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffd700; /* Gold color for the result text */
+  margin: 0 0 10px 0;
+}
+
+.score {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+/* 5. Action Buttons (Choices) */
+.choices {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+/* Base button styles for choices */
+.choices .btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s ease, filter 0.2s ease;
+  color: white;
+}
+
+/* Color coding using data-choice attributes */
+.choices .btn[data-choice="rock"] {
+  background-color: #e74c3c; /* Red */
+}
+
+.choices .btn[data-choice="paper"] {
+  background-color: #3498db; /* Blue */
+}
+
+.choices .btn[data-choice="scissor"] {
+  background-color: #2ecc71; /* Green */
+}
+
+/* Hover and active states for choices */
+.choices .btn:hover {
+  filter: brightness(1.1);
+}
+
+.choices .btn:active {
+  transform: scale(0.95);
+}
+
+/* 6. Reset Button Styles */
+button:not(.choices button) {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 16px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: none; /* Keeps it hidden until selected */
+}
+
+button:not(.choices button):hover {
+  background-color: #ffffff;
+  color: #1e3c72;
+  border-color: #ffffff;
+}
+    </style>
+</head>
+<body>
+    <div class="thisgame">
+        <h1>Rock Paper Scissor Game</h1>
+        <button>Reset</button>
+        <div class="resultGroup">
+            <p class="result">...</p>
+            <p class="score">0</p>
+        </div>
+     <div class="choices">
+       <button class="btn" data-choice="rock">Rock</button>
+       <button class="btn" data-choice="scissor">Scissor</button>
+       <button class="btn" data-choice="paper">Paper</button>
+      </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
