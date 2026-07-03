@@ -1,44 +1,28 @@
-const container=document.querySelector(".container");
-const box=document.querySelector(".box");
-let cardClicked=0;
-let firstCard=0;
-let secondCard=0;
+const container= document.querySelector(".container");
+let cardclicked=0;
+let firstcard=0;
+let secondcard=0;
 function gameStart(event){
     const target=event.target;
     if(target.classList.contains("box")){
-        const cardData=target.dataset.cardValue;
-        target.innerHTML=cardData;
-        console.log(`user clicked card value is ${cardData  }`)
-        checkCard(cardData);
+        ui(target);
     }
 }
-function checkCard(cardData){
-    if(cardClicked>=2){
-        cardClicked=0;
-        cardClicked++;
-        console.log("card clicked"+cardClicked);
-        return;
-    }
-    cardClicked++
-     firstCard=(cardClicked===1)?cardData:firstCard;
-     secondCard=(cardClicked===2)?cardData:secondCard;
-    console.log(`Card Clicked: ${cardClicked} | First Card: ${firstCard} | Second Card: ${secondCard}`);
-    console.log(`card clicked ${cardClicked}`);
-    if(cardClicked===2){
-compareValue();
+function ui(boxElement){
+    cardclicked++;
+    boxElement.innerHTML=boxElement.dataset.cardValue;
+    firstcard=(cardclicked===1)?boxElement:firstcard;
+    secondcard=(cardclicked===2)?boxElement:secondcard;
+    if(cardclicked>=2){
+        cardclicked=0;
+        compareData(boxElement);
     }
 }
-function compareValue(){
-    console.log("this function is called ?")
-    if(firstCard===secondCard){
-        console.log("keep it open and show data");
-        return;
+function compareData(boxElement){
+    console.log(" is this called ?")
+    if(firstcard.dataset.cardValue===secondcard.dataset.cardValue){
+        console.log("these are same cards ")
     }
-    else{
-        console.log("the value doesn't match ")
-    }
-    
 }
-
 
 container.addEventListener("click",gameStart);
