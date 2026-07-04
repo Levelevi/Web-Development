@@ -1,28 +1,31 @@
-const container= document.querySelector(".container");
-let cardclicked=0;
-let firstcard=0;
-let secondcard=0;
+const container=document.querySelector(".container");
+let cardflipedvalue=0;
+let firstcardValue=0;
+let secondcardValue=0;
 function gameStart(event){
     const target=event.target;
     if(target.classList.contains("box")){
-        ui(target);
-    }
+        if(cardflipedvalue>=2){
+            return;
+        }
+        cardflipedvalue++;
+        const value=target.dataset.cardValue;
+        target.innerHTML=value;
+        firstcardValue=(cardflipedvalue===1)?value:firstcardValue;
+        secondcardValue=(cardflipedvalue===2)?value:secondcardValue;
+        console.log(value);
+        console.log(`first card${firstcardValue} second card ${secondcardValue}`);
+        if(cardflipedvalue>=2){
+          comparedata();
+        }
+        }
 }
-function ui(boxElement){
-    cardclicked++;
-    boxElement.innerHTML=boxElement.dataset.cardValue;
-    firstcard=(cardclicked===1)?boxElement:firstcard;
-    secondcard=(cardclicked===2)?boxElement:secondcard;
-    if(cardclicked>=2){
-        cardclicked=0;
-        compareData(boxElement);
-    }
-}
-function compareData(boxElement){
-    console.log(" is this called ?")
-    if(firstcard.dataset.cardValue===secondcard.dataset.cardValue){
-        console.log("these are same cards ")
-    }
-}
+ function comparedata(){
+            if(firstcardValue===secondcardValue){
+                console.log("matched");
+            }else{
+                console.log("try again");
+            }
+        }
 
 container.addEventListener("click",gameStart);
