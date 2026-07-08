@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .elevatorContainer{
+            display: flex;
+            height: 90vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid red;
+            padding: 30px;
+            gap: 40px;
+        }
+        .statusDisplay{
+            border: 2px solid rgb(218, 38, 38);
+            height: 300px;
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .elevatorControls{
+            border: 2px solid red;
+            padding: 20px;
+            height: 200px;
+            display: grid;
+            width: 400px;
+            gap: 20px;
+            grid-template-columns: repeat(3,1fr);
+        }
+    </style>
+</head>
+<body>
+    <div class="elevatorContainer">
+        <div class="statusDisplay">Idle</div>
+          <div class="elevatorControls">
+          <button data-floor="1">1</button>
+          <button data-floor="2">2</button>
+          <button data-floor="3">3</button>
+          <button data-floor="4">4</button>
+          <button data-floor="5">5</button>
+       </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
