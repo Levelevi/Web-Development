@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    height: 70px;
+    padding: 24px;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar{    
+    display: flex;
+    gap: 20px;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    min-height: 30vh;
+}
+.hero h1{
+    font-size:4rem;
+}
+.hero p{
+    font-size: 1.8rem;
+}
+.hero-btns{
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+ }
+
+.hero-btns button{
+    border-radius: 12px;
+    padding: 12px;
+}    
+.Features{
+    padding: 22px 42px;
+    min-height: 40vh;
+ }
+.Features h2{   
+    padding: 42px 0px;
+}
+
+.featurecards{
+    display: grid;
+    min-height: 40vh;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+} 
+.features-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    align-items: center;
+}
+.Pricing button{
+     /* ugh idk how to center this button  */ 
+    border: 2px solid red;
+}
+.pricing-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 22px;
+    align-items: center;
+    border: 2px solid red;
+}
+.CTA-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    flex-direction: column;
+    gap: 22px;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
