@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Interface</title>
+    <style>
+        /* 1. Global Reset & Background Placement */
+        body {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #e0e5ec;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+        }
+
+        /* 2. Main Outer ATM Frame */
+        .atmcontainer {
+          background: linear-gradient(135deg, #4b5563, #1f2937);
+          padding: 30px;
+          border-radius: 20px;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+                      inset 0 2px 5px rgba(255, 255, 255, 0.2);
+          width: 100%;
+          max-width: 400px;
+          border: 4px solid #374151;
+        }
+
+        /* 3. Internal Functions Wrapper */
+        .atmfuncations {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        /* 4. Glowing ATM Interface Screen */
+        .atmScreen {
+          background-color: #0d1b15;
+          border: 3px solid #111827;
+          border-radius: 10px;
+          height: 180px;
+          box-shadow: inset 0 0 15px rgba(0, 255, 100, 0.4);
+          overflow: hidden;
+          
+          /* New styles to center your HTML text */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 20px;
+          box-sizing: border-box;
+          text-align: center;
+        }
+
+        /* Style for the Screen Heading */
+        .atmScreen h2 {
+          color: #39ff14;
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 22px;
+          margin: 0 0 10px 0;
+          text-shadow: 0 0 5px rgba(57, 255, 20, 0.8);
+        }
+
+        /* Style for the Screen Paragraph */
+        .atmScreen p {
+          color: #39ff14;
+          font-family: 'Courier New', Courier, monospace;
+          font-size: 16px;
+          margin: 0;
+          text-shadow: 0 0 5px rgba(57, 255, 20, 0.8);
+          opacity: 0.9;
+        }
+
+        /* 5. Button Container Layout */
+        .atmbuttons {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        /* 6. Styled Interactive Push Buttons */
+        .atmbuttons button {
+          background: linear-gradient(180deg, #374151, #111827);
+          color: #ffffff;
+          border: 1px solid #4b5563;
+          padding: 14px;
+          font-size: 15px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button Hover State */
+        .atmbuttons button:hover {
+          background: linear-gradient(180deg, #4b5563, #1f2937);
+          transform: translateY(-1px);
+          box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Button Active Pressed State */
+        .atmbuttons button:active {
+          background: linear-gradient(180deg, #111827, #1f2937);
+          transform: translateY(1px);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="atmcontainer">
+        <div class="atmfuncations">
+            <div class="atmScreen">
+                <h2>Welcome to ATM</h2>
+                <p>Please select an option</p>
+            </div>
+            <div class="atmbuttons">
+                <button class="Deposit">Deposit</button>
+                <button class="withDraw">Withdraw</button>
+                <button class="checkBalance">Check Balance</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
