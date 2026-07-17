@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shop</title>
+    <style>
+        /* Basic reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* Two-column layout container */
+.container {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* Products take up 70% width */
+.products-section {
+    flex: 70%;
+}
+
+/* Cart takes up 30% width */
+.cart-section {
+    flex: 30%;
+    background-color: #f4f4f4;
+    padding: 25px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+/* Grid for the 9 products */
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Bigger look for each product card */
+.product {
+    border: 2px solid #ccc;
+    padding: 20px;
+    width: 240px; /* Made the width bigger */
+    text-align: center;
+    border-radius: 8px;
+    background-color: white;
+}
+
+/* Bigger fake image block */
+.image {
+    background-color: #ddd;
+    height: 140px; /* Made the height taller */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Simple button style */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Simple cart content box styling */
+.cart-box {
+    margin-top: 15px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Left Side: Products List -->
+        <div class="products-section">
+            <h2>Products</h2>
+            
+            <div class="products-grid">
+                <!-- Apple -->
+                <div class="product" data-name="Apple" data-price="50">
+                    <div class="image">Apple Image</div>
+                    <p class="title">Apple</p>
+                    <p class="price">Price 50</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Banana -->
+                <div class="product" data-name="Banana" data-price="30">
+                    <div class="image">Banana Image</div>
+                    <p class="title">Banana</p>
+                    <p class="price">Price 30</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Orange -->
+                <div class="product" data-name="Orange" data-price="40">
+                    <div class="image">Orange Image</div>
+                    <p class="title">Orange</p>
+                    <p class="price">Price 40</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Mango -->
+                <div class="product" data-name="Mango" data-price="60">
+                    <div class="image">Mango Image</div>
+                    <p class="title">Mango</p>
+                    <p class="price">Price 60</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Grapes -->
+                <div class="product" data-name="Grapes" data-price="70">
+                    <div class="image">Grapes Image</div>
+                    <p class="title">Grapes</p>
+                    <p class="price">Price 70</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Strawberries -->
+                <div class="product" data-name="Strawberry" data-price="90">
+                    <div class="image">Strawberry Image</div>
+                    <p class="title">Strawberry</p>
+                    <p class="price">Price 90</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Watermelon -->
+                <div class="product" data-name="Watermelon" data-price="120">
+                    <div class="image">Watermelon Image</div>
+                    <p class="title">Watermelon</p>
+                    <p class="price">Price 120</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Pineapple -->
+                <div class="product" data-name="Pineapple" data-price="80">
+                    <div class="image">Pineapple Image</div>
+                    <p class="title">Pineapple</p>
+                    <p class="price">Price 80</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+
+                <!-- Blueberry -->
+                <div class="product" data-name="Blueberry" data-price="110">
+                    <div class="image">Blueberry Image</div>
+                    <p class="title">Blueberry</p>
+                    <p class="price">Price 110</p>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side: Cart Area -->
+        <div class="cart-section">
+            <h2>Your Cart</h2>
+            <div class="cart-box">
+                <p>Cart is empty</p>
+            </div>
+        </div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
