@@ -21,16 +21,18 @@ function getProduct(productCard){
 };
 
 function ui(){
-    cartBox.innerHTML=`
-        <div>
-            <h3>Product Name${cart.userCart.productName}</h3>
-            <p>Price${cart.userCart.productPrice}</p>
-            <p>Quantity: <span>${cart.userCart.productQuantity}</span></p>
-            <button>+</button>
-            <button>-</button>
-            <button>Delete</button>
-        </div>
-    `;
+    cartBox.innerHTML="";
+    const productCart=document.createElement("div");
+    productCart.innerHTML=`
+    <div>
+        <h3>Product Name${cart.userCart.productName}</h3>
+        <p>Price${cart.userCart.productPrice}</p>
+        <p>Quantity: <span>${cart.userCart.productQuantity}</span></p>
+        <button>+</button>
+        <button>-</button>
+        <button>Delete</button>
+        </div>`
+    cartBox.append(productCart);
 }
 
 
