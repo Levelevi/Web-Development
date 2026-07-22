@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    background-color: darkgray;
 }
 .navbar{
     display: flex;
@@ -58,4 +59,88 @@
     padding: 22px;
     justify-content: space-evenly;
     align-items:center;
+}
+.why_choose_us_section{
+     padding: 22px 44px;
+    border: 2px solid red;
+}
+.choose_us_section_cards{
+    display: flex;
+    padding: 22px 0px;
+    min-height: 20vh;
+    gap: 22px;
+}
+.choose_us_card{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    padding: 22px 44px;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid red;
+    justify-content: center;
+}
+.pricing_section{
+     padding: 22px 44px;
+    border: 2px solid red;
+}
+.pricing_cards{
+    display: flex;
+    gap: 20px;
+    padding: 22px 0px; 
+    min-height: 20vh;
+    align-items: center;
+}
+.pricing_card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border: 2px solid red;
+    gap: 20px;
+    padding: 22px 44px;
+}
+.testimonials{
+    padding: 22px 44px;
+    border: 2px solid red;
+}
+.testimonialscards{
+    display: flex;
+    gap: 20px;
+    padding: 22px 0px;
+    align-items: center;
+}
+.testimonialcard{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid red;
+    align-items: center;
+    justify-content: center;
+}
+.CTA_section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+    padding: 22px 0px;
+}
+.footer_content{
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    padding: 22px 0px;
+    border: 2px solid red;
+    gap: 22px;
+}
+.left_content{
+    border: 2px solid rgb(0, 55, 255);
+    flex: 1;
+}
+.right_content{
+    flex: 1;
 }
