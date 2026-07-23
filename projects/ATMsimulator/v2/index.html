@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Banking Terminal</title>
+    <style>
+        /* Universal Reset & Variables */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        :root {
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --primary: #0066cc;
+            --primary-hover: #0052a3;
+            --border: #cccccc;
+            --shadow: rgba(0, 0, 0, 0.1);
+            
+            /* New Screen Variables */
+            --screen-bg: #1a1a1a;
+            --screen-text: #00ff66;
+        }
+
+        /* Center everything on screen */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Card Container styling */
+        .container {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px var(--shadow);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .app-header h2 {
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--text-main);
+        }
+
+        /* Dynamic Terminal Display styling */
+        .input-box .display {
+            width: 100%;
+            min-height: 80px; /* Gives the screen some default height */
+            padding: 16px;
+            font-family: 'Courier New', Courier, monospace; /* Terminal vibe */
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: var(--screen-bg);
+            color: var(--screen-text);
+            border-radius: 8px;
+            border: 2px solid #333;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+            
+            /* Layout inside the screen */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            word-break: break-word;
+        }
+
+        /* Buttons Group Layout */
+        .buttons-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Button Base Styles */
+        .btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Optional variation for semantic aesthetics */
+        .btn-balance {
+            background-color: #6c757d;
+        }
+        .btn-balance:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <header class="app-header">
+            <h2>ATM Terminal</h2>
+        </header>
+
+        <section class="input-box">
+            <!-- Dynamic target container -->
+            <div class="display">Welcome. Select Transaction.</div>
+        </section>
+
+        <section class="buttons-group">
+            <button class="btn btn-deposit" data-action="deposit">Deposit</button>
+            <button class="btn btn-withdraw" data-action="withdraw">Withdraw</button>
+            <button class="btn btn-balance" data-action="balance">Check Balance</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
