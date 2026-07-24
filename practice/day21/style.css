@@ -1,0 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 44px;
+    border: 2px solid red;
+    margin-inline:auto; 
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Links{
+    display: flex;
+    gap: 22px;
+}
